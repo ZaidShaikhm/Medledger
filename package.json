@@ -1,0 +1,14 @@
+{
+  "name": "medledger",
+  "version": "1.0.0",
+  "description": "MedLedger — Pharma Billing for Retail & Wholesale",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.1"
+  }
+}

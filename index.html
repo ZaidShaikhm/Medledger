@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedLedger — Pharma Billing for Retail &amp; Wholesale</title>
+  <meta name="description" content="MedLedger is pharma billing software built in two tracks: fast retail billing for pharmacies and bulk-ready tools for wholesale distributors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════ NAVBAR -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#hero" class="nav-logo">
+          <span class="nav-logo-mark">
+            <!-- plus / cross — universal pharmacy symbol -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="9" y="2" width="6" height="20" rx="2" fill="currentColor"/>
+              <rect x="2" y="9" width="20" height="6" rx="2" fill="currentColor"/>
+            </svg>
+          </span>
+          MedLedger
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="btn-primary btn-sm">Talk to sales</a>
+
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile drawer -->
+      <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn-primary">Talk to sales</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════ HERO -->
+  <section id="hero">
+    <!-- Subtle grid pattern overlay -->
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-copy reveal">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            GST-compliant &nbsp;·&nbsp; Works offline &nbsp;·&nbsp; 48-hr setup
+          </div>
+
+          <h1 class="hero-headline">
+            Pharma billing that<br>
+            keeps your <span class="headline-mark">pharmacy</span><br>
+            running smoothly.
+          </h1>
+
+          <p class="hero-sub">
+            Purpose-built for the Indian pharma supply chain — fast counter billing for retail pharmacies and bulk invoice processing for wholesale distributors.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#contact" class="btn-primary btn-retail">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Book a Retail Demo
+            </a>
+            <a href="#contact" class="btn-outline">
+              Request Wholesale Pricing
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-social-proof">
+            <div class="proof-avatars">
+              <span class="avatar" style="background:#FDD0C0">A</span>
+              <span class="avatar" style="background:#B8E4D8">R</span>
+              <span class="avatar" style="background:#BDD5F5">K</span>
+              <span class="avatar" style="background:#FAE3B4">S</span>
+            </div>
+            <p>Trusted by <strong>1,200+ pharmacies</strong> across India</p>
+          </div>
+        </div>
+
+        <!-- Blister-pack / prescription card visual -->
+        <div class="hero-visual reveal">
+          <div class="rx-card">
+
+            <div class="rx-card-header">
+              <div class="rx-header-left">
+                <span class="rx-symbol">℞</span>
+                <div>
+                  <p class="rx-pharmacy-name">Sunrise Pharmacy</p>
+                  <p class="rx-sub">GST: 27ABCDE1234F1Z5</p>
+                </div>
+              </div>
+              <div class="rx-header-right">
+                <span class="rx-date" id="rx-date"></span>
+              </div>
+            </div>
+
+            <!-- Blister pack visual -->
+            <div class="blister-pack" aria-label="Animated medicine blister strip">
+              <div class="blister-label">Paracetamol 500mg &nbsp;·&nbsp; Batch: MH24B0712 &nbsp;·&nbsp; Exp: 03/2027</div>
+              <div class="blister-strip">
+                <div class="blister-cell"><div class="capsule capsule-blue"></div></div>
+                <div class="blister-cell"><div class="capsule capsule-blue"></div></div>
+                <div class="blister-cell empty"><div class="capsule-ghost"></div></div>
+                <div class="blister-cell"><div class="capsule capsule-blue"></div></div>
+                <div class="blister-cell"><div class="capsule capsule-blue"></div></div>
+                <div class="blister-cell empty"><div class="capsule-ghost"></div></div>
+                <div class="blister-cell"><div class="capsule capsule-blue"></div></div>
+                <div class="blister-cell"><div class="capsule capsule-blue"></div></div>
+                <div class="blister-cell empty"><div class="capsule-ghost"></div></div>
+                <div class="blister-cell"><div class="capsule capsule-green"></div></div>
+              </div>
+            </div>
+
+            <!-- Invoice line items -->
+            <div class="rx-items">
+              <div class="rx-item-header">
+                <span>Medicine</span><span>Qty</span><span>Rate</span><span>Amount</span>
+              </div>
+              <div class="rx-item">
+                <span>Paracetamol 500mg</span><span>2 strips</span><span>₹18.50</span><span>₹37.00</span>
+              </div>
+              <div class="rx-item">
+                <span>Azithromycin 250mg</span><span>1 strip</span><span>₹85.00</span><span>₹85.00</span>
+              </div>
+              <div class="rx-item">
+                <span>ORS Sachet (Electral)</span><span>6 pcs</span><span>₹12.00</span><span>₹72.00</span>
+              </div>
+            </div>
+
+            <div class="rx-totals">
+              <div class="rx-total-row">
+                <span>Subtotal</span><span>₹194.00</span>
+              </div>
+              <div class="rx-total-row">
+                <span>GST (12%)</span><span>₹23.28</span>
+              </div>
+              <div class="rx-total-row rx-grand-total">
+                <span>Total</span><span>₹217.28</span>
+              </div>
+            </div>
+
+            <div class="rx-footer">
+              <span class="gst-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                GST Invoice
+              </span>
+              <span class="rx-inv-no">INV-2024-08471</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════ TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>CDSCO Compliant</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>99.9% uptime</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          <span>GST auto-filing</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Setup in 48 hrs</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          <span>Offline billing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════ ABOUT -->
+  <section id="about" class="section-sky">
+    <div class="container">
+      <div class="about-inner">
+
+        <div class="about-copy reveal">
+          <p class="eyebrow">Why MedLedger</p>
+          <h2>Designed for the pharmacy<br>counter, not the boardroom.</h2>
+          <p>Most billing software starts with finance teams and asks pharmacies to adapt. We started from the dispensing counter: every invoice is GST-correct by default, every batch is expiry-tracked automatically, and the register keeps working even during connectivity issues. Less reconciling at month-end — more time for your patients.</p>
+
+          <ul class="about-checks">
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Handles Schedule H, H1 &amp; X drugs with automatic flags
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Batch-wise FIFO dispensing — oldest stock goes first
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Expiry alerts 60 / 30 / 7 days out — nothing goes to waste
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              GSTR-1, GSTR-3B auto-populated from your billing data
+            </li>
+          </ul>
+        </div>
+
+        <div class="stats-grid reveal">
+          <div class="stat-card stat-blue">
+            <p class="stat-number">1,200<span>+</span></p>
+            <p class="stat-label">Active pharmacies</p>
+          </div>
+          <div class="stat-card stat-green">
+            <p class="stat-number">₹840<span>Cr+</span></p>
+            <p class="stat-label">Billed this year</p>
+          </div>
+          <div class="stat-card stat-green">
+            <p class="stat-number">99.9<span>%</span></p>
+            <p class="stat-label">Billing uptime</p>
+          </div>
+          <div class="stat-card stat-blue">
+            <p class="stat-number">48<span>hrs</span></p>
+            <p class="stat-label">Avg. setup time</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════ PRODUCTS -->
+  <section id="products" class="section-white">
+    <div class="container">
+      <div class="products-inner reveal">
+
+        <div class="section-hd">
+          <p class="eyebrow">Two products, one ecosystem</p>
+          <h2>Pick the track that fits<br>your operation.</h2>
+          <p class="section-sub">Retail pharmacies and wholesale distributors have fundamentally different billing workflows. MedLedger ships both — under one login.</p>
+        </div>
+
+        <!-- Tab bar -->
+        <div class="tab-bar" role="tablist" aria-label="Product line">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="retail" aria-controls="panel-retail">
+            <span class="tab-icon tab-icon-retail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </span>
+            <span>
+              <span class="tab-eyebrow">Single-store pharmacies</span>
+              <span class="tab-label">Retail Billing</span>
+            </span>
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="wholesale" aria-controls="panel-wholesale">
+            <span class="tab-icon tab-icon-wholesale">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </span>
+            <span>
+              <span class="tab-eyebrow">Distributors &amp; C&amp;F agents</span>
+              <span class="tab-label">Wholesale Billing</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Retail panel -->
+        <div class="tab-panel active" id="panel-retail" role="tabpanel">
+          <div class="feature-grid">
+
+            <div class="feature-card">
+              <div class="feature-icon fi-retail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
+              <h3>Counter billing in seconds</h3>
+              <p>Scan, bill, and print a GST invoice in under 30 seconds — works with any USB or Bluetooth barcode scanner.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon fi-retail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <h3>Batch-wise stock tracking</h3>
+              <p>Every medicine tracked to its batch, manufacturer, and expiry date. FIFO dispensing enforced automatically.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon fi-retail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              </div>
+              <h3>Automatic reorder alerts</h3>
+              <p>Set minimum stock thresholds per SKU — get alerts before runout or auto-raise purchase orders to suppliers.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon fi-retail">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h3>Prescription record-keeping</h3>
+              <p>Scan and link prescriptions to invoices. Schedule H &amp; H1 drugs flagged and recorded for drug licence compliance.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Wholesale panel -->
+        <div class="tab-panel" id="panel-wholesale" role="tabpanel">
+          <div class="feature-grid">
+
+            <div class="feature-card">
+              <div class="feature-icon fi-wholesale">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <h3>Bulk invoice generation</h3>
+              <p>Generate hundreds of GST invoices and e-way bills in a single batch run — with auto-calculated freight and taxes.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon fi-wholesale">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h3>Party ledger management</h3>
+              <p>Party-wise outstanding balances, aging reports, and credit-limit enforcement — so collections are data-led.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon fi-wholesale">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v4M9.5 17.5L12 12M14.5 17.5L12 12"/></svg>
+              </div>
+              <h3>Retailer ordering portal</h3>
+              <p>Give downstream pharmacies a self-serve portal to place orders, track dispatches, and download their own invoices.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon fi-wholesale">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <h3>Multi-warehouse inventory</h3>
+              <p>Stock levels, dispatches, and returns stay accurate across every depot and warehouse — in real time.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════ CONTACT -->
+  <section id="contact" class="section-sky">
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Get started</p>
+          <h2>Tell us about your pharmacy or business.</h2>
+          <p>Share a few details and we'll match you with the right track — retail demo or wholesale pricing — within one business day.</p>
+
+          <ul class="contact-highlights">
+            <li>
+              <span class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.9a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.93 5.93l.98-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.9 16"/></svg>
+              </span>
+              Reply within one business day
+            </li>
+            <li>
+              <span class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="20" rx="2"/><rect x="2" y="9" width="20" height="6" rx="2"/></svg>
+              </span>
+              Free 30-min walkthrough, no commitment
+            </li>
+            <li>
+              <span class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              Data security &amp; DPDP Act compliant
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-card reveal">
+          <form id="lead-form" novalidate>
+            <div class="form-grid">
+
+              <div class="form-field full">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Dr. Asha Mehta" autocomplete="name" />
+                <span class="field-error" id="err-fullName"></span>
+              </div>
+
+              <div class="form-field full">
+                <label for="businessName">Pharmacy / business name</label>
+                <input type="text" id="businessName" name="businessName" placeholder="Sunrise Pharmacy" />
+                <span class="field-error" id="err-businessName"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="businessType">Business type</label>
+                <div class="select-wrap">
+                  <select id="businessType" name="businessType">
+                    <option value="">Select one</option>
+                    <option value="Retailer">Retail Pharmacy</option>
+                    <option value="Wholesaler">Wholesale Distributor</option>
+                    <option value="Hospital">Hospital Pharmacy</option>
+                    <option value="Chain">Pharmacy Chain</option>
+                  </select>
+                  <svg class="select-arrow" viewBox="0 0 12 12" fill="currentColor"><path d="M6 8L1 3h10z"/></svg>
+                </div>
+                <span class="field-error" id="err-businessType"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" placeholder="9876543210" inputmode="numeric" autocomplete="tel" />
+                <span class="field-error" id="err-phone"></span>
+              </div>
+
+              <div class="form-field full">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="asha@sunrisepharmacy.in" autocomplete="email" />
+                <span class="field-error" id="err-email"></span>
+              </div>
+
+            </div>
+            <button type="submit" class="btn-submit">
+              Submit request
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════ FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo footer-logo">
+            <span class="nav-logo-mark">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="9" y="2" width="6" height="20" rx="2" fill="currentColor"/>
+                <rect x="2" y="9" width="20" height="6" rx="2" fill="currentColor"/>
+              </svg>
+            </span>
+            MedLedger
+          </a>
+          <p class="footer-tagline">Pharma billing for retail &amp; wholesale India</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <p class="footer-copy">&copy; <span id="footer-year"></span> MedLedger. All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════ SUCCESS MODAL -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+
+      <p class="modal-eyebrow">Request received</p>
+      <h3 id="modal-title">We'll be in touch shortly!</h3>
+      <p id="modal-msg">Our team will reach out within one business day.</p>
+
+      <button class="btn-primary modal-btn" id="modal-ok">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
